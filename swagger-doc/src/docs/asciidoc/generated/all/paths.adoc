@@ -1,0 +1,916 @@
+
+[[_paths]]
+== 资源
+
+[[_53010dd4d583ec268ba62c9931562853]]
+=== 1、抽奖模板增删改查
+Template Controller
+
+
+[[_gettemplatebyidusingget]]
+==== 根据id查询模板详细信息
+....
+GET /admin/lottery/template
+....
+
+
+===== 说明
+get请求，调用说明：
+ 1、进入修改页面时，根据id查询抽奖模板时调用
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Query**|**id** +
+__必填__|抽奖模板id|integer (int64)
+|**Query**|**shopId** +
+__可选__||string
+|**Query**|**shopName** +
+__可选__||string
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**1000**|成功|无内容
+|**200**|OK|<<_386a7575eb9ab9417f2e3c9e8b716bb0,BaseResponse«TemplateResponse»>>
+|**2001**|失败|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/admin/lottery/template
+----
+
+
+====== 请求 query
+[source,json]
+----
+{
+  "id" : 1001,
+  "shopId" : "string",
+  "shopName" : "string"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : {
+    "ltemplate" : {
+      "activityId" : 0,
+      "activityType" : 0,
+      "createdBy" : 0,
+      "createdTime" : 0,
+      "deleted" : 0,
+      "deliveryLimit" : "string",
+      "deliveryType" : 0,
+      "description" : "string",
+      "id" : 0,
+      "name" : "string",
+      "prizeNumMax" : 0,
+      "prizeRealNum" : 0,
+      "prizeShowNum" : 0,
+      "recyclableTime" : 0,
+      "shopId" : "string",
+      "shopName" : "string",
+      "status" : 0,
+      "styleId" : "string",
+      "styleName" : "string",
+      "updatedBy" : 0,
+      "updatedTime" : 0,
+      "winRate" : 0
+    },
+    "prizeItemList" : [ {
+      "createdBy" : 0,
+      "createdTime" : 0,
+      "deleted" : 0,
+      "id" : 0,
+      "imgUrl" : "string",
+      "name" : "string",
+      "orderNumber" : 0,
+      "prizeValue" : "string",
+      "realCount" : 0,
+      "shopId" : "string",
+      "shopName" : "string",
+      "showCount" : 0,
+      "templateId" : 0,
+      "type" : 0,
+      "updatedBy" : 0,
+      "updatedTime" : 0
+    } ]
+  },
+  "message" : "string"
+}
+----
+
+
+[[_updatetemplatebyidusingput]]
+==== 修改模板
+....
+PUT /admin/lottery/template
+....
+
+
+===== 说明
+put请求，调用说明：
+ 1、进入修改页面后，点击保存设置时调用
+ 2、如果响应的code为2001，需要用户进一步确定后，重新请求本接口，参数中的confirmed的值为1
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**param** +
+__必填__|param|<<_templateupdateparam,TemplateUpdateParam>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**1000**|成功|无内容
+|**200**|OK|<<_c2b8bd5459ac78f2e4e0011198c1a1d4,BaseResponse«string»>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/admin/lottery/template
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "confirmed" : 1,
+  "deliveryLimit" : "",
+  "deliveryType" : 1,
+  "description" : "春节活动",
+  "id" : 1001,
+  "name" : "幸运抽奖",
+  "prizeItemList" : [ {
+    "id" : 1101,
+    "imgUrl" : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555905832226&di=1c90f7dce3d18d38bc72746de6000d8f&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F8%2F58ac06aaa4974.jpg",
+    "name" : "一等奖",
+    "orderNumber" : 1,
+    "prizeValue" : "5",
+    "realCount" : 100,
+    "showCount" : 200,
+    "type" : 1,
+    "updated" : 2
+  } ],
+  "prizeNumMax" : 8,
+  "shopId" : "string",
+  "shopName" : "string",
+  "status" : 1,
+  "styleId" : "1",
+  "styleName" : "九宫格",
+  "updatedBy" : 100,
+  "winRate" : 50
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "string",
+  "message" : "string"
+}
+----
+
+
+[[_addtemplateusingpost]]
+==== 添加抽奖模板
+....
+POST /admin/lottery/template
+....
+
+
+===== 说明
+post请求，在添加一个新的抽奖模板时调用
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**param** +
+__必填__|param|<<_templateaddparam,TemplateAddParam>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**1000**|成功|无内容
+|**1011**|失败|无内容
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/admin/lottery/template
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "createdBy" : 100,
+  "deliveryLimit" : "",
+  "deliveryType" : 1,
+  "description" : "春节活动",
+  "name" : "幸运抽奖",
+  "prizeItemList" : [ {
+    "id" : 1101,
+    "imgUrl" : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555905832226&di=1c90f7dce3d18d38bc72746de6000d8f&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F8%2F58ac06aaa4974.jpg",
+    "name" : "一等奖",
+    "orderNumber" : 1,
+    "prizeValue" : "5",
+    "realCount" : 100,
+    "showCount" : 200,
+    "type" : 1,
+    "updated" : 2
+  } ],
+  "prizeNumMax" : 8,
+  "shopId" : "string",
+  "shopName" : "string",
+  "status" : 1,
+  "styleId" : "1",
+  "styleName" : "九宫格",
+  "winRate" : 50
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "message" : "string"
+}
+----
+
+
+[[_deletetemplatebyidusingdelete]]
+==== 删除模板
+....
+DELETE /admin/lottery/template
+....
+
+
+===== 说明
+delete请求，调用说明：
+ 1、单个/批量删除模板时使用
+ 2、使模板批量失效/生效时使用
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**param** +
+__必填__|param|<<_templatedeleteparam,TemplateDeleteParam>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**1000**|成功|无内容
+|**1012**|失败|无内容
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**204**|No Content|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|===
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/admin/lottery/template
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "idList" : [ 1118815558105579521, 1118818608350326785 ],
+  "shopId" : "string",
+  "shopName" : "string",
+  "updatedBy" : 100
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "message" : "string"
+}
+----
+
+
+[[_gettemplatepageusingget]]
+==== 分页查询模板信息
+....
+GET /admin/lottery/template/page
+....
+
+
+===== 说明
+get请求，调用说明：
+ 1、进入抽奖模板列表页面时调用
+ 2、拉取可用抽奖模板列表时调用
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Query**|**pageNum** +
+__必填__|当前页码|integer (int32)
+|**Query**|**pageSize** +
+__必填__|每页条数|integer (int32)
+|**Query**|**shopId** +
+__可选__||string
+|**Query**|**shopName** +
+__可选__||string
+|**Query**|**status** +
+__可选__|状态|integer (int32)
+|**Query**|**usable** +
+__可选__|是否可用|integer (int32)
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**1000**|成功|无内容
+|**200**|OK|<<_918b11af87afda7616e1c8eee66aa3f3,BaseResponse«LTemplate»>>
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/admin/lottery/template/page
+----
+
+
+====== 请求 query
+[source,json]
+----
+{
+  "pageNum" : 1,
+  "pageSize" : 10,
+  "shopId" : "string",
+  "shopName" : "string",
+  "status" : 1,
+  "usable" : 1
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : {
+    "activityId" : 0,
+    "activityType" : 0,
+    "createdBy" : 0,
+    "createdTime" : 0,
+    "deleted" : 0,
+    "deliveryLimit" : "string",
+    "deliveryType" : 0,
+    "description" : "string",
+    "id" : 0,
+    "name" : "string",
+    "prizeNumMax" : 0,
+    "prizeRealNum" : 0,
+    "prizeShowNum" : 0,
+    "recyclableTime" : 0,
+    "shopId" : "string",
+    "shopName" : "string",
+    "status" : 0,
+    "styleId" : "string",
+    "styleName" : "string",
+    "updatedBy" : 0,
+    "updatedTime" : 0,
+    "winRate" : 0
+  },
+  "message" : "string"
+}
+----
+
+
+[[_changetemplatestatususingput]]
+==== 修改模板的状态
+....
+PUT /admin/lottery/template/status
+....
+
+
+===== 说明
+put请求，调用说明：
+ 1、点击使单个模板失效/生效时使用
+ 2、使模板批量失效/生效时使用
+ 3、如果响应的code为2001，需要用户进一步确定后，重新请求本接口，参数中的confirmed的值为1
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**param** +
+__必填__|param|<<_templatestatusparam,TemplateStatusParam>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**1000**|成功|无内容
+|**1002**|失败|无内容
+|**200**|OK|<<_c2b8bd5459ac78f2e4e0011198c1a1d4,BaseResponse«string»>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/admin/lottery/template/status
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "confirmed" : 1,
+  "idList" : [ 1118815558105579521, 1118818608350326785 ],
+  "shopId" : "string",
+  "shopName" : "string",
+  "status" : 1,
+  "updatedBy" : 100
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "string",
+  "message" : "string"
+}
+----
+
+
+[[_basic-error-controller_resource]]
+=== Basic-error-controller
+Basic Error Controller
+
+
+[[_errorusingget]]
+==== error
+....
+GET /error
+....
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/error
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_errorusingput]]
+==== error
+....
+PUT /error
+....
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/error
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_errorusingpost]]
+==== error
+....
+POST /error
+....
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/error
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_errorusingdelete]]
+==== error
+....
+DELETE /error
+....
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**204**|No Content|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|===
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/error
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_errorusingpatch]]
+==== error
+....
+PATCH /error
+....
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**204**|No Content|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/error
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_errorusinghead]]
+==== error
+....
+HEAD /error
+....
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**204**|No Content|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/error
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_errorusingoptions]]
+==== error
+....
+OPTIONS /error
+....
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**204**|No Content|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/error
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+
