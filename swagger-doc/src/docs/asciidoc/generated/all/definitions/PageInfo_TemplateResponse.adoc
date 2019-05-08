@@ -1,0 +1,49 @@
+
+[[_8f28d68cde40fc4941f7b2bd27f4620f]]
+=== PageInfo«TemplateResponse»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**endRow** +
+__可选__|**样例** : `0`|integer (int32)
+|**firstPage** +
+__可选__|**样例** : `0`|integer (int32)
+|**hasNextPage** +
+__可选__|**样例** : `true`|boolean
+|**hasPreviousPage** +
+__可选__|**样例** : `true`|boolean
+|**isFirstPage** +
+__可选__|**样例** : `true`|boolean
+|**isLastPage** +
+__可选__|**样例** : `true`|boolean
+|**lastPage** +
+__可选__|**样例** : `0`|integer (int32)
+|**list** +
+__可选__|**样例** : `[ "<<_templateresponse>>" ]`|< <<_templateresponse,TemplateResponse>> > array
+|**navigatePages** +
+__可选__|**样例** : `0`|integer (int32)
+|**navigatepageNums** +
+__可选__|**样例** : `[ 0 ]`|< integer (int32) > array
+|**nextPage** +
+__可选__|**样例** : `0`|integer (int32)
+|**orderBy** +
+__可选__|**样例** : `"string"`|string
+|**pageNum** +
+__可选__|**样例** : `0`|integer (int32)
+|**pageSize** +
+__可选__|**样例** : `0`|integer (int32)
+|**pages** +
+__可选__|**样例** : `0`|integer (int32)
+|**prePage** +
+__可选__|**样例** : `0`|integer (int32)
+|**size** +
+__可选__|**样例** : `0`|integer (int32)
+|**startRow** +
+__可选__|**样例** : `0`|integer (int32)
+|**total** +
+__可选__|**样例** : `0`|integer (int64)
+|===
+
+
+

@@ -1,0 +1,17 @@
+
+[[_3b52426649216cfde129545ba10cb8d9]]
+=== BaseResponse«TemplateDetailResponse»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|**样例** : `0`|integer (int32)
+|**data** +
+__可选__|**样例** : `"<<_templatedetailresponse>>"`|<<_templatedetailresponse,TemplateDetailResponse>>
+|**message** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+

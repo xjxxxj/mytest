@@ -77,16 +77,31 @@
                 <groupId>org.asciidoctor</groupId>
                 <artifactId>asciidoctor-maven-plugin</artifactId>
                 <version>1.5.3</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj-pdf</artifactId>
+                        <version>1.5.0-alpha.14</version>
+                    </dependency>
+                    <!-- Comment this section to use the default jruby artifact provided by the plugin -->
+                    <dependency>
+                        <groupId>org.jruby</groupId>
+                        <artifactId>jruby-complete</artifactId>
+                        <version>1.7.21</version>
+                    </dependency>
+                </dependencies>
                 <configuration>
                     <sourceDirectory>src/docs/asciidoc/generated/all</sourceDirectory>
+                    <sourceDocumentName>index.adoc</sourceDocumentName>
                     <outputDirectory>src/docs/asciidoc/html</outputDirectory>
                     <backend>html</backend>
                     <sourceHighlighter>coderay</sourceHighlighter>
                     <attributes>
                         <toc>left</toc>
                         <doctype>book</doctype>
-                        <toclevels>2</toclevels>
+                        <toclevels>3</toclevels>
                     </attributes>
+                    <skip>false</skip>
                 </configuration>
             </plugin>
             <plugin>
@@ -94,17 +109,14 @@
                 <artifactId>swagger2markup-maven-plugin</artifactId>
                 <version>1.3.1</version>
                 <configuration>
-                    <swaggerInput>http://localhost:8080/v2/api-docs</swaggerInput>
+                    <swaggerInput>http://localhost:8083/v2/api-docs</swaggerInput>
                     <outputDir>src/docs/asciidoc/generated/all</outputDir>
                     <config>
                         <swagger2markup.pathsGroupedBy>TAGS</swagger2markup.pathsGroupedBy>
-                        <swagger2markup.tagOrderBy>NATURAL</swagger2markup.tagOrderBy>
                         <swagger2markup.markupLanguage>ASCIIDOC</swagger2markup.markupLanguage>
-                        <swagger2markup.definitionsOrderedBy>AS_IS</swagger2markup.definitionsOrderedBy>
                         <swagger2markup.outputLanguage>ZH</swagger2markup.outputLanguage>
                         <swagger2markup.generatedExamplesEnabled>true</swagger2markup.generatedExamplesEnabled>
                         <swagger2markup.inlineSchemaEnabled>true</swagger2markup.inlineSchemaEnabled>
-                        <swagger2markup.operationOrderBy>CUSTOM</swagger2markup.operationOrderBy>
                     </config>
                 </configuration>
             </plugin>

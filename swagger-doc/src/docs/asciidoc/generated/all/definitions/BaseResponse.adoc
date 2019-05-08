@@ -1,0 +1,17 @@
+
+[[_baseresponse]]
+=== BaseResponse
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|**样例** : `0`|integer (int32)
+|**data** +
+__可选__|**样例** : `"object"`|object
+|**message** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+

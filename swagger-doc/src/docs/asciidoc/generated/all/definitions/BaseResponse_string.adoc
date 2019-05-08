@@ -1,0 +1,17 @@
+
+[[_c2b8bd5459ac78f2e4e0011198c1a1d4]]
+=== BaseResponse«string»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|**样例** : `0`|integer (int32)
+|**data** +
+__可选__|**样例** : `"string"`|string
+|**message** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+

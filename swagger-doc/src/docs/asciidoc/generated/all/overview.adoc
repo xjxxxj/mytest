@@ -1,33 +1,24 @@
-= Api Documentation
+= 支付有礼服务接口
 
 
 [[_overview]]
 == 概览
-Api Documentation
-
 
 === 版本信息
 [%hardbreaks]
-__版本__ : 1.0
-
-
-=== 许可信息
-[%hardbreaks]
-__许可证__ : Apache 2.0
-__许可网址__ : http://www.apache.org/licenses/LICENSE-2.0
-__服务条款__ : urn:tos
+__版本__ : v1.0
 
 
 === URI scheme
 [%hardbreaks]
-__域名__ : localhost:8080
+__域名__ : localhost:8083
 __基础路径__ : /
 
 
 === 标签
 
-* 1、抽奖模板增删改查 : Template Controller
-* basic-error-controller : Basic Error Controller
+* 1、支付有礼活动增删改查 : Pay Reward Controller
+* 2、app端关于支付有礼活动的接口 : App Pay Reward Controller
 
 
 

@@ -1,0 +1,17 @@
+
+[[_6f4e78f84bfb3ae9ebc145d8d06f238e]]
+=== BaseResponse«PageInfo«LActivityResponse»»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|**样例** : `0`|integer (int32)
+|**data** +
+__可选__|**样例** : `"<<_db73cf6f8fe79e18573b4d7d09086819>>"`|<<_db73cf6f8fe79e18573b4d7d09086819,PageInfo«LActivityResponse»>>
+|**message** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+

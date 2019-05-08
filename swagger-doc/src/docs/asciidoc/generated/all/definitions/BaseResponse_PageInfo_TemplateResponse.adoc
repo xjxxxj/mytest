@@ -1,0 +1,17 @@
+
+[[_6dea010b8777a1792df5c6de52fc8bb9]]
+=== BaseResponse«PageInfo«TemplateResponse»»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|**样例** : `0`|integer (int32)
+|**data** +
+__可选__|**样例** : `"<<_8f28d68cde40fc4941f7b2bd27f4620f>>"`|<<_8f28d68cde40fc4941f7b2bd27f4620f,PageInfo«TemplateResponse»>>
+|**message** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+

@@ -17,8 +17,8 @@ __可选__|**样例** : `"string"`|string
 |===
 
 
-[[_918b11af87afda7616e1c8eee66aa3f3]]
-=== BaseResponse«LTemplate»
+[[_1c4e9df0b303b4ead059b8090da2ab4e]]
+=== BaseResponse«PageInfo»
 
 [options="header", cols=".^3,.^11,.^4"]
 |===
@@ -26,14 +26,14 @@ __可选__|**样例** : `"string"`|string
 |**code** +
 __可选__|**样例** : `0`|integer (int32)
 |**data** +
-__可选__|**样例** : `"<<_ltemplate>>"`|<<_ltemplate,LTemplate>>
+__可选__|**样例** : `"<<_pageinfo>>"`|<<_pageinfo,PageInfo>>
 |**message** +
 __可选__|**样例** : `"string"`|string
 |===
 
 
-[[_386a7575eb9ab9417f2e3c9e8b716bb0]]
-=== BaseResponse«TemplateResponse»
+[[_634bb5d345d4a2856819a4896720902b]]
+=== BaseResponse«PayRewardDetailResponse»
 
 [options="header", cols=".^3,.^11,.^4"]
 |===
@@ -41,343 +41,359 @@ __可选__|**样例** : `"string"`|string
 |**code** +
 __可选__|**样例** : `0`|integer (int32)
 |**data** +
-__可选__|**样例** : `"<<_templateresponse>>"`|<<_templateresponse,TemplateResponse>>
+__可选__|**样例** : `"<<_payrewarddetailresponse>>"`|<<_payrewarddetailresponse,PayRewardDetailResponse>>
 |**message** +
 __可选__|**样例** : `"string"`|string
 |===
 
 
-[[_c2b8bd5459ac78f2e4e0011198c1a1d4]]
-=== BaseResponse«string»
+[[_ppayreward]]
+=== PPayReward
 
 [options="header", cols=".^3,.^11,.^4"]
 |===
 |名称|说明|类型
-|**code** +
+|**conditionType** +
 __可选__|**样例** : `0`|integer (int32)
-|**data** +
-__可选__|**样例** : `"string"`|string
-|**message** +
-__可选__|**样例** : `"string"`|string
-|===
-
-
-[[_lprizeitem]]
-=== LPrizeItem
-
-[options="header", cols=".^3,.^11,.^4"]
-|===
-|名称|说明|类型
 |**createdBy** +
 __可选__|**样例** : `0`|integer (int64)
 |**createdTime** +
 __可选__|**样例** : `0`|integer (int64)
 |**deleted** +
 __可选__|**样例** : `0`|integer (int32)
+|**description** +
+__可选__|**样例** : `"string"`|string
+|**endTime** +
+__可选__|**样例** : `0`|integer (int64)
 |**id** +
 __可选__|**样例** : `0`|integer (int64)
-|**imgUrl** +
-__可选__|**样例** : `"string"`|string
 |**name** +
 __可选__|**样例** : `"string"`|string
-|**orderNumber** +
-__可选__|**样例** : `0`|integer (int32)
-|**prizeValue** +
-__可选__|**样例** : `"string"`|string
-|**realCount** +
+|**scene** +
 __可选__|**样例** : `0`|integer (int32)
 |**shopId** +
 __可选__|**样例** : `"string"`|string
 |**shopName** +
 __可选__|**样例** : `"string"`|string
-|**showCount** +
-__可选__|**样例** : `0`|integer (int32)
-|**templateId** +
+|**startTime** +
 __可选__|**样例** : `0`|integer (int64)
-|**type** +
+|**status** +
 __可选__|**样例** : `0`|integer (int32)
 |**updatedBy** +
 __可选__|**样例** : `0`|integer (int64)
 |**updatedTime** +
 __可选__|**样例** : `0`|integer (int64)
+|**value** +
+__可选__|**样例** : `"string"`|string
 |===
 
 
-[[_ltemplate]]
-=== LTemplate
+[[_pprizeitem]]
+=== PPrizeItem
 
 [options="header", cols=".^3,.^11,.^4"]
 |===
 |名称|说明|类型
 |**activityId** +
 __可选__|**样例** : `0`|integer (int64)
-|**activityType** +
-__可选__|**样例** : `0`|integer (int32)
+|**activityName** +
+__可选__|**样例** : `"string"`|string
 |**createdBy** +
 __可选__|**样例** : `0`|integer (int64)
 |**createdTime** +
 __可选__|**样例** : `0`|integer (int64)
 |**deleted** +
 __可选__|**样例** : `0`|integer (int32)
-|**deliveryLimit** +
-__可选__|**样例** : `"string"`|string
-|**deliveryType** +
+|**gitValue** +
 __可选__|**样例** : `0`|integer (int32)
-|**description** +
-__可选__|**样例** : `"string"`|string
 |**id** +
 __可选__|**样例** : `0`|integer (int64)
-|**name** +
-__可选__|**样例** : `"string"`|string
-|**prizeNumMax** +
-__可选__|**样例** : `0`|integer (int32)
-|**prizeRealNum** +
-__可选__|**样例** : `0`|integer (int32)
-|**prizeShowNum** +
-__可选__|**样例** : `0`|integer (int32)
-|**recyclableTime** +
+|**lotteryActivityId** +
 __可选__|**样例** : `0`|integer (int64)
+|**orderAmount** +
+__可选__|**样例** : `0`|integer (int32)
 |**shopId** +
 __可选__|**样例** : `"string"`|string
 |**shopName** +
 __可选__|**样例** : `"string"`|string
-|**status** +
+|**templateId** +
+__可选__|**样例** : `0`|integer (int64)
+|**templateName** +
+__可选__|**样例** : `"string"`|string
+|**type** +
 __可选__|**样例** : `0`|integer (int32)
-|**styleId** +
-__可选__|**样例** : `"string"`|string
-|**styleName** +
-__可选__|**样例** : `"string"`|string
 |**updatedBy** +
 __可选__|**样例** : `0`|integer (int64)
 |**updatedTime** +
 __可选__|**样例** : `0`|integer (int64)
-|**winRate** +
-__可选__|**样例** : `0`|integer (int32)
 |===
 
 
-[[_modelandview]]
-=== ModelAndView
+[[_pprizeitemaddparam]]
+=== PPrizeItemAddParam
 
 [options="header", cols=".^3,.^11,.^4"]
 |===
 |名称|说明|类型
-|**empty** +
-__可选__|**样例** : `true`|boolean
-|**model** +
-__可选__|**样例** : `"object"`|object
-|**modelMap** +
-__可选__|**样例** : `{
-  "string" : "object"
-}`|< string, object > map
-|**reference** +
-__可选__|**样例** : `true`|boolean
-|**status** +
-__可选__|**样例** : `"string"`|enum (100, 101, 102, 103, 200, 201, 202, 203, 204, 205, 206, 207, 208, 226, 300, 301, 302, 303, 304, 305, 307, 308, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 426, 428, 429, 431, 451, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511)
-|**view** +
-__可选__|**样例** : `"<<_view>>"`|<<_view,View>>
-|**viewName** +
-__可选__|**样例** : `"string"`|string
-|===
-
-
-[[_prizeitemparam]]
-=== PrizeItemParam
-
-[options="header", cols=".^3,.^11,.^4"]
-|===
-|名称|说明|类型
-|**id** +
-__可选__|id +
-**样例** : `1101`|integer (int64)
-|**imgUrl** +
-__必填__|图片地址 +
-**样例** : `"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555905832226&di=1c90f7dce3d18d38bc72746de6000d8f&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F8%2F58ac06aaa4974.jpg"`|string
-|**name** +
-__必填__|奖项名称 +
-**样例** : `"一等奖"`|string
-|**orderNumber** +
-__必填__|排序数字 +
+|**gitValue** +
+__必填__|赠送值 +
 **样例** : `1`|integer (int32)
-|**prizeValue** +
-__必填__|奖品项值 +
-**样例** : `"5"`|string
-|**realCount** +
-__必填__|奖品真实数量 +
-**样例** : `100`|integer (int32)
-|**showCount** +
-__必填__|展示数量 +
-**样例** : `200`|integer (int32)
-|**type** +
-__必填__|奖品类型 +
-**样例** : `1`|integer (int32)
-|**updated** +
-__可选__|是否发生修改 +
+|**orderAmount** +
+__必填__|订单金额 +
 **样例** : `2`|integer (int32)
+|**templateId** +
+__必填__|抽奖模板的id +
+**样例** : `1`|integer (int64)
+|**templateName** +
+__必填__|抽奖模板名称 +
+**样例** : `"春节有礼抽奖"`|string
+|**type** +
+__必填__|赠送礼品类型 +
+**样例** : `1`|integer (int32)
 |===
 
 
-[[_templateaddparam]]
-=== TemplateAddParam
+[[_pprizeitemupdateparam]]
+=== PPrizeItemUpdateParam
 
 [options="header", cols=".^3,.^11,.^4"]
 |===
 |名称|说明|类型
-|**createdBy** +
-__必填__|创建人 +
-**样例** : `100`|integer (int64)
-|**deliveryLimit** +
-__可选__|限制门店 +
-**样例** : `""`|string
-|**deliveryType** +
-__必填__|配送方式 +
+|**gitValue** +
+__必填__|赠送值 +
 **样例** : `1`|integer (int32)
-|**description** +
-__可选__|说明 +
-**样例** : `"春节活动"`|string
-|**name** +
-__必填__|模板名称 +
-**样例** : `"幸运抽奖"`|string
-|**prizeItemList** +
-__可选__|**样例** : `[ "<<_prizeitemparam>>" ]`|< <<_prizeitemparam,PrizeItemParam>> > array
-|**prizeNumMax** +
-__必填__|奖品项最大数 +
-**样例** : `8`|integer (int32)
-|**shopId** +
-__可选__|**样例** : `"string"`|string
-|**shopName** +
-__可选__|**样例** : `"string"`|string
-|**status** +
-__必填__|状态 +
-**样例** : `1`|integer (int32)
-|**styleId** +
-__可选__|抽奖样式id +
-**样例** : `"1"`|string
-|**styleName** +
-__必填__|抽奖样式名称 +
-**样例** : `"九宫格"`|string
-|**winRate** +
-__必填__|中奖总概率 +
-**样例** : `50`|integer (int32)
-|===
-
-
-[[_templatedeleteparam]]
-=== TemplateDeleteParam
-
-[options="header", cols=".^3,.^11,.^4"]
-|===
-|名称|说明|类型
-|**idList** +
-__可选__|抽奖模板id集合 +
-**样例** : `[ 1118815558105579521, 1118818608350326785 ]`|< integer (int64) > array
-|**shopId** +
-__可选__|**样例** : `"string"`|string
-|**shopName** +
-__可选__|**样例** : `"string"`|string
-|**updatedBy** +
-__必填__|修改人 +
-**样例** : `100`|integer (int64)
-|===
-
-
-[[_templateresponse]]
-=== TemplateResponse
-
-[options="header", cols=".^3,.^11,.^4"]
-|===
-|名称|说明|类型
-|**ltemplate** +
-__可选__|**样例** : `"<<_ltemplate>>"`|<<_ltemplate,LTemplate>>
-|**prizeItemList** +
-__可选__|**样例** : `[ "<<_lprizeitem>>" ]`|< <<_lprizeitem,LPrizeItem>> > array
-|===
-
-
-[[_templatestatusparam]]
-=== TemplateStatusParam
-
-[options="header", cols=".^3,.^11,.^4"]
-|===
-|名称|说明|类型
-|**confirmed** +
-__必填__|是否已确认修改 +
-**样例** : `1`|integer (int32)
-|**idList** +
-__可选__|抽奖模板id集合 +
-**样例** : `[ 1118815558105579521, 1118818608350326785 ]`|< integer (int64) > array
-|**shopId** +
-__可选__|**样例** : `"string"`|string
-|**shopName** +
-__可选__|**样例** : `"string"`|string
-|**status** +
-__必填__|状态 +
-**样例** : `1`|integer (int32)
-|**updatedBy** +
-__必填__|修改人 +
-**样例** : `100`|integer (int64)
-|===
-
-
-[[_templateupdateparam]]
-=== TemplateUpdateParam
-
-[options="header", cols=".^3,.^11,.^4"]
-|===
-|名称|说明|类型
-|**confirmed** +
-__必填__|是否已确认修改 +
-**样例** : `1`|integer (int32)
-|**deliveryLimit** +
-__可选__|限制门店 +
-**样例** : `""`|string
-|**deliveryType** +
-__必填__|配送方式 +
-**样例** : `1`|integer (int32)
-|**description** +
-__可选__|说明 +
-**样例** : `"春节活动"`|string
 |**id** +
-__必填__|模板id +
-**样例** : `1001`|integer (int64)
+__可选__|优惠id +
+**样例** : `1`|integer (int64)
+|**orderAmount** +
+__必填__|订单金额 +
+**样例** : `2`|integer (int32)
+|**templateId** +
+__必填__|抽奖模板的id +
+**样例** : `1`|integer (int64)
+|**templateName** +
+__必填__|抽奖模板名称 +
+**样例** : `"春节有礼抽奖"`|string
+|**type** +
+__必填__|赠送礼品类型 +
+**样例** : `1`|integer (int32)
+|===
+
+
+[[_pageinfo]]
+=== PageInfo
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**endRow** +
+__可选__|**样例** : `0`|integer (int32)
+|**firstPage** +
+__可选__|**样例** : `0`|integer (int32)
+|**hasNextPage** +
+__可选__|**样例** : `true`|boolean
+|**hasPreviousPage** +
+__可选__|**样例** : `true`|boolean
+|**isFirstPage** +
+__可选__|**样例** : `true`|boolean
+|**isLastPage** +
+__可选__|**样例** : `true`|boolean
+|**lastPage** +
+__可选__|**样例** : `0`|integer (int32)
+|**list** +
+__可选__|**样例** : `[ "object" ]`|< object > array
+|**navigatePages** +
+__可选__|**样例** : `0`|integer (int32)
+|**navigatepageNums** +
+__可选__|**样例** : `[ 0 ]`|< integer (int32) > array
+|**nextPage** +
+__可选__|**样例** : `0`|integer (int32)
+|**orderBy** +
+__可选__|**样例** : `"string"`|string
+|**pageNum** +
+__可选__|**样例** : `0`|integer (int32)
+|**pageSize** +
+__可选__|**样例** : `0`|integer (int32)
+|**pages** +
+__可选__|**样例** : `0`|integer (int32)
+|**prePage** +
+__可选__|**样例** : `0`|integer (int32)
+|**size** +
+__可选__|**样例** : `0`|integer (int32)
+|**startRow** +
+__可选__|**样例** : `0`|integer (int32)
+|**total** +
+__可选__|**样例** : `0`|integer (int64)
+|===
+
+
+[[_payrewardaddparam]]
+=== PayRewardAddParam
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**conditionType** +
+__必填__|活动门槛：1：订单满金额，2：指定商品，3：指定商品类型，4：指定品牌 +
+**样例** : `2`|integer (int32)
+|**description** +
+__必填__|支付有礼活动描述 +
+**样例** : `"这是个支付有礼活动"`|string
+|**endTime** +
+__必填__|支付有礼活动结束时间 +
+**样例** : `1655919297170`|integer (int64)
+|**list** +
+__可选__|优惠集合:list集合，每个元素为PPrizeItemAddParam +
+**样例** : `[ "<<_pprizeitemaddparam>>" ]`|< <<_pprizeitemaddparam,PPrizeItemAddParam>> > array
 |**name** +
-__必填__|模板名称 +
-**样例** : `"幸运抽奖"`|string
+__必填__|支付有礼活动名称 +
+**样例** : `"支付有礼促销活动"`|string
+|**scene** +
+__必填__|场景：1：全部场景，2：线上消费，3：线下消费 +
+**样例** : `1`|integer (int32)
+|**shopId** +
+__可选__|**样例** : `"string"`|string
+|**shopName** +
+__可选__|**样例** : `"string"`|string
+|**startTime** +
+__必填__|支付有礼活动开始时间 +
+**样例** : `1555919263000`|integer (int64)
+|**status** +
+__必填__|状态：1:有效，2：无效 +
+**样例** : `1`|integer (int32)
+|**value** +
+__必填__|活动门槛值:json数组，格式：[{key:value},{key,value}] +
+**样例** : `"[{\"itemId\":\"no-1\",\"itemName\":\"name-1\"},{\"itemId\":\"no-2\",\"itemName\":\"name-2\"}]"`|string
+|===
+
+
+[[_payrewarddetailresponse]]
+=== PayRewardDetailResponse
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**payReward** +
+__可选__|**样例** : `"<<_ppayreward>>"`|<<_ppayreward,PPayReward>>
 |**prizeItemList** +
-__可选__|**样例** : `[ "<<_prizeitemparam>>" ]`|< <<_prizeitemparam,PrizeItemParam>> > array
-|**prizeNumMax** +
-__必填__|奖品项最大数 +
-**样例** : `8`|integer (int32)
+__可选__|**样例** : `[ "<<_pprizeitem>>" ]`|< <<_pprizeitem,PPrizeItem>> > array
+|===
+
+
+[[_payrewardjoinparam]]
+=== PayRewardJoinParam
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**brandNo** +
+__可选__|商品品牌编号 +
+**样例** : `"31"`|string
+|**cardId** +
+__可选__|**样例** : `"string"`|string
+|**itemNO** +
+__必填__|商品编号 +
+**样例** : `"JSA58020208"`|string
+|**openId** +
+__可选__|**样例** : `"string"`|string
+|**orderAmount** +
+__必填__|订单金额 +
+**样例** : `2`|integer (int32)
+|**scene** +
+__必填__|场景:2：线上消费，3：线下消费 +
+**样例** : `1`|integer (int32)
+|**shopId** +
+__可选__|**样例** : `"string"`|string
+|**shopName** +
+__可选__|**样例** : `"string"`|string
+|**typeNo** +
+__可选__|商品类别编号 +
+**样例** : `"0601"`|string
+|===
+
+
+[[_payrewardlotterydraw]]
+=== PayRewardLotteryDraw
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**cardId** +
+__可选__|**样例** : `"string"`|string
+|**lotteryActivityId** +
+__必填__|抽奖活动ID +
+**样例** : `1`|integer (int64)
+|**openId** +
+__可选__|**样例** : `"string"`|string
+|**shopId** +
+__可选__|**样例** : `"string"`|string
+|**shopName** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_payrewardstatusupdateparam]]
+=== PayRewardStatusUpdateParam
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**id** +
+__必填__|支付有礼活动id +
+**样例** : `1`|integer (int64)
 |**shopId** +
 __可选__|**样例** : `"string"`|string
 |**shopName** +
 __可选__|**样例** : `"string"`|string
 |**status** +
-__必填__|状态 +
+__必填__|状态:1:有效，2：无效 +
 **样例** : `1`|integer (int32)
-|**styleId** +
-__可选__|抽奖样式id +
-**样例** : `"1"`|string
-|**styleName** +
-__必填__|抽奖样式名称 +
-**样例** : `"九宫格"`|string
-|**updatedBy** +
-__必填__|修改人 +
-**样例** : `100`|integer (int64)
-|**winRate** +
-__必填__|中奖总概率 +
-**样例** : `50`|integer (int32)
 |===
 
 
-[[_view]]
-=== View
+[[_payrewardupdateparam]]
+=== PayRewardUpdateParam
 
 [options="header", cols=".^3,.^11,.^4"]
 |===
 |名称|说明|类型
-|**contentType** +
+|**conditionType** +
+__必填__|活动门槛:1：订单满金额，2：指定商品，3：指定商品类型，4：指定品牌 +
+**样例** : `2`|integer (int32)
+|**confirmed** +
+__必填__|是否已确认修改:1:是，2：否 +
+**样例** : `1`|integer (int32)
+|**description** +
+__必填__|支付有礼活动描述 +
+**样例** : `"这是个支付有礼活动"`|string
+|**endTime** +
+__必填__|支付有礼活动结束时间 +
+**样例** : `1655919297170`|integer (int64)
+|**id** +
+__必填__|支付有礼活动id +
+**样例** : `1`|integer (int64)
+|**list** +
+__可选__|优惠集合:list集合，每个元素为PPrizeItemAddParam +
+**样例** : `[ "<<_pprizeitemupdateparam>>" ]`|< <<_pprizeitemupdateparam,PPrizeItemUpdateParam>> > array
+|**name** +
+__必填__|支付有礼活动名称 +
+**样例** : `"支付有礼促销活动"`|string
+|**scene** +
+__必填__|场景:1：全部场景，2：线上消费，3：线下消费 +
+**样例** : `1`|integer (int32)
+|**shopId** +
 __可选__|**样例** : `"string"`|string
+|**shopName** +
+__可选__|**样例** : `"string"`|string
+|**startTime** +
+__必填__|支付有礼活动开始时间 +
+**样例** : `1555919263000`|integer (int64)
+|**status** +
+__必填__|状态:1:有效，2：无效 +
+**样例** : `1`|integer (int32)
+|**value** +
+__必填__|活动门槛值:json数组，格式：[{key:value},{key,value}] +
+**样例** : `"[{\"itemId\":\"no-1\",\"itemName\":\"name-1\"},{\"itemId\":\"no-2\",\"itemName\":\"name-2\"}]"`|string
 |===
 
 

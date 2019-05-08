@@ -1,0 +1,55 @@
+
+[[_templateresponse]]
+=== TemplateResponse
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**createdTime** +
+__可选__|**样例** : `0`|integer (int64)
+|**deliveryLimit** +
+__可选__|限制门店 +
+**样例** : `"[{\"id\":\"001\",\"name\":\"南山店\"},{\"id\":\"002\",\"name\":\"宝安店\"}]"`|string
+|**deliveryType** +
+__可选__|配送方式 +
+**样例** : `1`|integer (int32)
+|**description** +
+__可选__|说明 +
+**样例** : `"春节活动"`|string
+|**id** +
+__可选__|模板id +
+**样例** : `1001`|integer (int64)
+|**name** +
+__可选__|模板名称 +
+**样例** : `"幸运抽奖"`|string
+|**prizeNumMax** +
+__可选__|奖品项最大数 +
+**样例** : `8`|integer (int32)
+|**prizeRealNum** +
+__可选__|奖品真实总数量 +
+**样例** : `8`|integer (int32)
+|**prizeShowNum** +
+__可选__|奖品展示总数量 +
+**样例** : `8`|integer (int32)
+|**shopId** +
+__可选__|**样例** : `"string"`|string
+|**shopName** +
+__可选__|**样例** : `"string"`|string
+|**status** +
+__可选__|状态 +
+**样例** : `1`|integer (int32)
+|**styleId** +
+__可选__|抽奖样式id +
+**样例** : `"1"`|string
+|**styleName** +
+__可选__|抽奖样式名称 +
+**样例** : `"九宫格"`|string
+|**updatedTime** +
+__可选__|**样例** : `0`|integer (int64)
+|**winRate** +
+__可选__|中奖总概率 +
+**样例** : `50`|integer (int32)
+|===
+
+
+

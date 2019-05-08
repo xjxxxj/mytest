@@ -1,0 +1,27 @@
+
+[[_templatestatusparam]]
+=== TemplateStatusParam
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**confirmed** +
+__必填__|是否已确认修改 +
+**样例** : `1`|integer (int32)
+|**idList** +
+__可选__|抽奖模板id集合 +
+**样例** : `"[1118815558105579521,1118818608350326785]"`|< integer (int64) > array
+|**shopId** +
+__可选__|**样例** : `"string"`|string
+|**shopName** +
+__可选__|**样例** : `"string"`|string
+|**status** +
+__必填__|状态 +
+**样例** : `1`|integer (int32)
+|**updatedBy** +
+__可选__|修改人 +
+**样例** : `100`|integer (int64)
+|===
+
+
+

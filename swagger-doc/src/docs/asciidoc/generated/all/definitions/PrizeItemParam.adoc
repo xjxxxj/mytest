@@ -1,0 +1,38 @@
+
+[[_prizeitemparam]]
+=== PrizeItemParam
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**id** +
+__可选__|id +
+**样例** : `1101`|integer (int64)
+|**imgUrl** +
+__必填__|图片地址 +
+**样例** : `"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555905832226&di=1c90f7dce3d18d38bc72746de6000d8f&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F8%2F58ac06aaa4974.jpg"`|string
+|**name** +
+__必填__|奖项名称 +
+**样例** : `"一等奖"`|string
+|**orderNumber** +
+__必填__|排序数字 +
+**样例** : `1`|integer (int32)
+|**prizeValue** +
+__必填__|奖品项值 +
+**样例** : `"5"`|string
+|**realCount** +
+__必填__|奖品真实数量 +
+**样例** : `100`|integer (int32)
+|**showCount** +
+__必填__|展示数量 +
+**样例** : `200`|integer (int32)
+|**type** +
+__必填__|奖品类型 +
+**样例** : `1`|integer (int32)
+|**updated** +
+__可选__|是否发生修改 +
+**样例** : `2`|integer (int32)
+|===
+
+
+

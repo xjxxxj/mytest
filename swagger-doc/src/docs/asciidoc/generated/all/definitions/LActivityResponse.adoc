@@ -1,0 +1,47 @@
+
+[[_lactivityresponse]]
+=== LActivityResponse
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**activityId** +
+__可选__|营销活动id +
+**样例** : `123455666`|integer (int64)
+|**activityName** +
+__可选__|营销活动名字 +
+**样例** : `"支付有礼活动"`|string
+|**activityType** +
+__可选__|营销活动类型 +
+**样例** : `1`|integer (int32)
+|**activityUrl** +
+__可选__|抽奖链接 +
+**样例** : `"http://siss/lottery/pay"`|string
+|**description** +
+__可选__|营销活动描述 +
+**样例** : `"这是个支付有礼活动"`|string
+|**endTime** +
+__可选__|抽奖活动结束时间 +
+**样例** : `1655919297170`|integer (int64)
+|**freeTimes** +
+__可选__|免费次数 +
+**样例** : `0`|integer (int32)
+|**id** +
+__可选__|抽奖活动id +
+**样例** : `1001`|integer (int64)
+|**startTime** +
+__可选__|抽奖活动开始时间 +
+**样例** : `1555919263000`|integer (int64)
+|**status** +
+__可选__|状态 +
+**样例** : `1`|integer (int32)
+|**templateId** +
+__可选__|抽奖模板的id +
+**样例** : `1`|integer (int64)
+|**templateName** +
+__可选__|抽奖模板名称 +
+**样例** : `"春节有礼抽奖"`|string
+|===
+
+
+

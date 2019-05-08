@@ -1,5 +1,4 @@
 == 接口相关说明
 ==== 开发环境的swagger文档访问地址
 
-http://dev.siss.io/marketing-campaign/lottery/swagger-ui.html#/
-说明:此接口文档中下拉选择: lottery路由到对于的swagger中去
+http://dev.siss.io/marketing-campaign/points-lottery/swagger-ui.html#/

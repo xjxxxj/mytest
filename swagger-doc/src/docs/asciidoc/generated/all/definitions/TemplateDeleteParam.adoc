@@ -1,0 +1,21 @@
+
+[[_templatedeleteparam]]
+=== TemplateDeleteParam
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**idList** +
+__可选__|抽奖模板id集合 +
+**样例** : `"[1118815558105579521,1118818608350326785]"`|< integer (int64) > array
+|**shopId** +
+__可选__|**样例** : `"string"`|string
+|**shopName** +
+__可选__|**样例** : `"string"`|string
+|**updatedBy** +
+__可选__|修改人 +
+**样例** : `100`|integer (int64)
+|===
+
+
+

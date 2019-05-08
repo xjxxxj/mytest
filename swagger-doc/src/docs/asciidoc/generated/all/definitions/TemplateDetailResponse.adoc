@@ -1,0 +1,15 @@
+
+[[_templatedetailresponse]]
+=== TemplateDetailResponse
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**prizeItemResponseList** +
+__可选__|**样例** : `[ "<<_lprizeitemresponse>>" ]`|< <<_lprizeitemresponse,LPrizeItemResponse>> > array
+|**templateResponse** +
+__可选__|**样例** : `"<<_templateresponse>>"`|<<_templateresponse,TemplateResponse>>
+|===
+
+
+
